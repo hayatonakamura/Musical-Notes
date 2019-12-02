@@ -1,0 +1,6 @@
+framework module Pods_Musical_Notes {
+  umbrella header "Pods-Musical Notes-umbrella.h"
+
+  export *
+  module * { export * }
+}
