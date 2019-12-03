@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Books-->
         <scene sceneID="vVz-z8-0yy">
             <objects>
                 <viewController id="amt-x8-39W" customClass="StartViewController" customModule="Musical_Notes" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +161,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TPl-fu-kCh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="lIp-2G-xUV"/>
+                    <tabBarItem key="tabBarItem" title="Books" id="lIp-2G-xUV"/>
                     <connections>
                         <outlet property="author_label" destination="Yub-yz-T9R" id="NsG-ft-DsX"/>
                         <outlet property="isbn_label" destination="QuF-7P-fDl" id="kX3-Ol-jU1"/>
@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="554.39999999999998" y="275.61576354679806"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="2rQ-vH-11z">
             <objects>
                 <viewController id="upX-pU-dXs" customClass="ViewController" customModule="Musical_Notes" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,8 +187,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-gf-idV">
-                                <rect key="frame" x="20" y="36" width="252" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-gf-idV">
+                                <rect key="frame" x="20" y="36" width="284" height="72"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -218,7 +218,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Olq-Js-p9z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jq9-ZK-jyM"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="jq9-ZK-jyM"/>
                     <connections>
                         <outlet property="PieChart" destination="MMB-a2-sZO" id="wBa-J6-Lo4"/>
                     </connections>
@@ -271,7 +271,7 @@
             </objects>
             <point key="canvasLocation" x="-396" y="-51"/>
         </scene>
-        <!--Item-->
+        <!--Analytics-->
         <scene sceneID="EDl-85-ttc">
             <objects>
                 <viewController id="gKK-4s-g7A" customClass="AnalyticsViewController" customModule="Musical_Notes" customModuleProvider="target" sceneMemberID="viewController">
@@ -325,7 +325,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1t-Gh-h2Q"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wb6-91-Ybq"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" id="wb6-91-Ybq"/>
                     <navigationItem key="navigationItem" id="bWy-mt-rwa"/>
                     <connections>
                         <outlet property="FE_bar_char" destination="eda-r3-vV1" id="I4B-ZX-tcp"/>
@@ -394,6 +394,6 @@
         <image name="right_arrow" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QLu-5c-Qne"/>
+        <segue reference="P0n-sE-l6X"/>
     </inferredMetricsTieBreakers>
 </document>
