@@ -191,13 +191,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-gf-idV">
-                                <rect key="frame" x="20" y="36" width="284" height="72"/>
+                                <rect key="frame" x="20" y="36" width="284" height="121"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMB-a2-sZO" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="184" width="375" height="309"/>
+                                <rect key="frame" x="0.0" y="233" width="375" height="309"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhh-Ee-QIO">
@@ -268,7 +268,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="upX-pU-dXs" kind="relationship" relationship="viewControllers" id="v94-5S-Ni5"/>
+                        <segue destination="9lf-97-JLb" kind="relationship" relationship="viewControllers" id="Awg-me-vHv"/>
                         <segue destination="amt-x8-39W" kind="relationship" relationship="viewControllers" id="9cA-Yb-pp2"/>
                         <segue destination="gKK-4s-g7A" kind="relationship" relationship="viewControllers" id="48n-SJ-faQ"/>
                     </connections>
@@ -480,7 +480,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-ud-Nvl">
-                                <rect key="frame" x="20" y="36" width="284" height="121"/>
+                                <rect key="frame" x="20" y="36" width="284" height="72"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -491,6 +491,19 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqR-h3-yin" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="165" width="375" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-9y-agB">
+                                <rect key="frame" x="323" y="101" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="refresh_b"/>
+                                <connections>
+                                    <action selector="refresh_pressed:" destination="9lf-97-JLb" eventType="touchUpInside" id="lgx-ZJ-6l2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92133218049999999" green="0.51966795759999995" blue="0.4875932905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -503,18 +516,22 @@
                         <viewLayoutGuide key="safeArea" id="EUp-ui-BC4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="meR-Oo-7bz"/>
+                    <connections>
+                        <outlet property="lineChart" destination="dqR-h3-yin" id="kCY-hY-7Fg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMk-bZ-drj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="-1059"/>
+            <point key="canvasLocation" x="552.79999999999995" y="-1059.6059113300494"/>
         </scene>
     </scenes>
     <resources>
         <image name="add" width="512" height="512"/>
         <image name="left_arrow" width="512" height="512"/>
+        <image name="refresh_b" width="512" height="512"/>
         <image name="right_arrow" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P0n-sE-l6X"/>
+        <segue reference="Y9N-Ki-U7v"/>
     </inferredMetricsTieBreakers>
 </document>

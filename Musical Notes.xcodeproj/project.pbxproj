@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		4A22F2732389F00800D30551 /* Musical_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22F2722389F00800D30551 /* Musical_NotesTests.swift */; };
 		4A4FF3CF239B143F005C5146 /* addBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3CE239B143F005C5146 /* addBookViewController.swift */; };
 		4A4FF3D1239B4B7F005C5146 /* timeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */; };
+		4A4FF3D4239C3CE0005C5146 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4FF3D3239C3CE0005C5146 /* SwiftUICharts */; };
+		4A4FF3D6239C3D6E005C5146 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3D5239C3D6E005C5146 /* testViewController.swift */; };
 		4A87E1A9238CA21200A0BABA /* Pods_Musical_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; };
 		4A87E1AA238CA21200A0BABA /* Pods_Musical_Notes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AAAC8212395AF3E00565E43 /* QuickViewAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */; };
@@ -67,6 +69,7 @@
 		4A22F2742389F00800D30551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4FF3CE239B143F005C5146 /* addBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBookViewController.swift; sourceTree = "<group>"; };
 		4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeReadViewController.swift; sourceTree = "<group>"; };
+		4A4FF3D5239C3D6E005C5146 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViewAnalyticsViewController.swift; sourceTree = "<group>"; };
 		70F8BD7FF89302C8D0E7A0A3 /* Pods-Musical Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musical Notes.release.xcconfig"; path = "Target Support Files/Pods-Musical Notes/Pods-Musical Notes.release.xcconfig"; sourceTree = "<group>"; };
 		C30E5F2834292C2742D84B8D /* Pods_Musical_NotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musical_NotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A87E1A9238CA21200A0BABA /* Pods_Musical_Notes.framework in Frameworks */,
+				4A4FF3D4239C3CE0005C5146 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +125,7 @@
 				4A22F25D2389F00600D30551 /* SceneDelegate.swift */,
 				4A22F25F2389F00600D30551 /* ViewController.swift */,
 				4A22F2612389F00600D30551 /* Main.storyboard */,
+				4A4FF3D5239C3D6E005C5146 /* testViewController.swift */,
 				4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */,
 				4A4FF3CE239B143F005C5146 /* addBookViewController.swift */,
 				4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */,
@@ -182,6 +187,9 @@
 			dependencies = (
 			);
 			name = "Musical Notes";
+			packageProductDependencies = (
+				4A4FF3D3239C3CE0005C5146 /* SwiftUICharts */,
+			);
 			productName = "Musical Notes";
 			productReference = 4A22F2582389F00600D30551 /* Musical Notes.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 4A22F24F2389F00600D30551;
+			packageReferences = (
+				4A4FF3D2239C3CE0005C5146 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 4A22F2592389F00600D30551 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +374,7 @@
 				4A22F2602389F00600D30551 /* ViewController.swift in Sources */,
 				4A4FF3D1239B4B7F005C5146 /* timeReadViewController.swift in Sources */,
 				4A228FB1238CC87B00B2545D /* StartViewController.swift in Sources */,
+				4A4FF3D6239C3D6E005C5146 /* testViewController.swift in Sources */,
 				4AAAC8212395AF3E00565E43 /* QuickViewAnalyticsViewController.swift in Sources */,
 				4A4FF3CF239B143F005C5146 /* addBookViewController.swift in Sources */,
 				4A228FB32390007D00B2545D /* AnalyticsViewController.swift in Sources */,
@@ -640,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A4FF3D2239C3CE0005C5146 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A4FF3D3239C3CE0005C5146 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A4FF3D2239C3CE0005C5146 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A22F2502389F00600D30551 /* Project object */;
 }
