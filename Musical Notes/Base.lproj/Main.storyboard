@@ -61,8 +61,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-r5-QZQ">
-                                <rect key="frame" x="20" y="408" width="339" height="77"/>
+                                <rect key="frame" x="0.0" y="408" width="375" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79612993059294435" green="0.72541598481895508" blue="0.80992776160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,7 +85,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-7P-fDl">
                                 <rect key="frame" x="234" y="329" width="125" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -151,6 +152,14 @@
                                     <action selector="make_current_button_pressed:" destination="amt-x8-39W" eventType="touchUpInside" id="aQ8-Kb-ZV6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PA-XK-brv">
+                                <rect key="frame" x="327" y="517" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="add"/>
+                                <connections>
+                                    <segue destination="eMp-L7-ooz" kind="show" id="dOi-Cq-hTd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92133218049999999" green="0.51966795759999995" blue="0.4875932905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="TPl-fu-kCh"/>
@@ -181,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-gf-idV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-gf-idV">
                                 <rect key="frame" x="20" y="36" width="284" height="72"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2S-Ox-eeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554.39999999999998" y="-377.58620689655174"/>
+            <point key="canvasLocation" x="554" y="-395"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fgb-qQ-WOI">
@@ -352,8 +361,8 @@
                                 <rect key="frame" x="0.0" y="99" width="375" height="242"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-VX-6uT" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="341" width="375" height="236"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-VX-6uT" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="341" width="375" height="242"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXq-Qp-hZX">
@@ -394,14 +403,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rqm-yC-BdO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="304"/>
+            <point key="canvasLocation" x="1764" y="303.69458128078821"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tvP-mv-CIJ">
+            <objects>
+                <viewController id="eMp-L7-ooz" customClass="addBookViewController" customModule="Musical_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HFp-xh-bDM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-fI-mLe">
+                                <rect key="frame" x="16" y="30" width="236" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="apy-60-iCx">
+                                <rect key="frame" x="48" y="145" width="279" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36P-xh-Kro">
+                                <rect key="frame" x="48" y="212" width="279" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-v3-8Ne">
+                                <rect key="frame" x="48" y="281" width="279" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJE-Sz-CkO">
+                                <rect key="frame" x="151" y="357" width="83" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Add Book">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="add_book_pressed:" destination="eMp-L7-ooz" eventType="touchUpInside" id="L3M-dD-Gzl"/>
+                                    <action selector="make_current_button_pressed:" destination="amt-x8-39W" eventType="touchUpInside" id="VRX-qg-fn9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72798008920000001" green="0.59239071310000002" blue="0.80992776160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GPX-fI-mLe" firstAttribute="leading" secondItem="PWe-oe-uQt" secondAttribute="leading" constant="16" id="6ZW-lL-Ujb"/>
+                            <constraint firstItem="GPX-fI-mLe" firstAttribute="top" secondItem="HFp-xh-bDM" secondAttribute="top" constant="30" id="VD9-ou-alp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PWe-oe-uQt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="M3x-8e-zo3"/>
+                    <navigationItem key="navigationItem" id="LPK-dA-NuW"/>
+                    <connections>
+                        <outlet property="addBook" destination="nJE-Sz-CkO" id="hoQ-Fy-VMF"/>
+                        <outlet property="author_field" destination="36P-xh-Kro" id="v3H-ng-Abe"/>
+                        <outlet property="isbn_field" destination="f5a-v3-8Ne" id="Yac-YI-6Jn"/>
+                        <outlet property="title_field" destination="apy-60-iCx" id="obN-5A-CFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1U-9p-56h" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="304"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="jX8-z8-C0G">
+            <objects>
+                <viewController id="9lf-97-JLb" customClass="timeReadViewController" customModule="Musical_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Njj-2F-W3w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-ud-Nvl">
+                                <rect key="frame" x="20" y="36" width="284" height="121"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuZ-xT-qgT">
+                                <rect key="frame" x="327" y="36" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92133218049999999" green="0.51966795759999995" blue="0.4875932905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NNd-ud-Nvl" firstAttribute="top" secondItem="Njj-2F-W3w" secondAttribute="top" constant="36" id="Rfj-vI-eFT"/>
+                            <constraint firstItem="EUp-ui-BC4" firstAttribute="bottom" secondItem="NNd-ud-Nvl" secondAttribute="bottom" constant="621" id="VC0-9m-IiI"/>
+                            <constraint firstItem="NNd-ud-Nvl" firstAttribute="leading" secondItem="EUp-ui-BC4" secondAttribute="leading" constant="20" id="VyC-1j-Qd6"/>
+                            <constraint firstItem="EUp-ui-BC4" firstAttribute="trailing" secondItem="NNd-ud-Nvl" secondAttribute="trailing" constant="71" id="d0L-oQ-tds"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EUp-ui-BC4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="meR-Oo-7bz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMk-bZ-drj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-1059"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="512" height="512"/>
         <image name="left_arrow" width="512" height="512"/>
         <image name="right_arrow" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QLu-5c-Qne"/>
+        <segue reference="P0n-sE-l6X"/>
     </inferredMetricsTieBreakers>
 </document>

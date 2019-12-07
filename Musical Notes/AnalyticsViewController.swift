@@ -19,6 +19,7 @@ struct BookInfo: Codable {
 struct Datum: Codable {
     let id, bookID, date: String
     let facialEmotions: FacialEmotions
+    let heartRate: Double
     let text: String
     let textSentiments: TextSentiments
 
@@ -26,6 +27,7 @@ struct Datum: Codable {
         case id = "_id"
         case bookID = "book_id"
         case date
+        case heartRate = "heart_rate"
         case facialEmotions = "facial_emotions"
         case text
         case textSentiments = "text_sentiments"

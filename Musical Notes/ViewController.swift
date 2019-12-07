@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     struct Datum: Codable {
         let bookID, bookTitle: String
         let emotionCount: Int
+        let heartRate: Double
         let facialEmotions: FacialEmotions
         let textSentiments: TextSentiments
 
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
             case bookID = "book_id"
             case bookTitle = "book_title"
             case emotionCount = "emotion_count"
+            case heartRate = "heart_rate"
             case facialEmotions = "facial_emotions"
             case textSentiments = "text_sentiments"
         }
@@ -55,8 +57,6 @@ class ViewController: UIViewController {
     
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             let cumulative = try? JSONDecoder().decode(Cumulative.self, from: data)
             let cumu = cumulative!.data
             
-            // Replace this later
+            // Replace this later with comb of text values too
             var ang = 0.0
             var joy = 0.0
             var sor = 0.0

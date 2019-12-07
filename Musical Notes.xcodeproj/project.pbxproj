@@ -16,6 +16,8 @@
 		4A22F2652389F00800D30551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A22F2642389F00800D30551 /* Assets.xcassets */; };
 		4A22F2682389F00800D30551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A22F2662389F00800D30551 /* LaunchScreen.storyboard */; };
 		4A22F2732389F00800D30551 /* Musical_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22F2722389F00800D30551 /* Musical_NotesTests.swift */; };
+		4A4FF3CF239B143F005C5146 /* addBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3CE239B143F005C5146 /* addBookViewController.swift */; };
+		4A4FF3D1239B4B7F005C5146 /* timeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */; };
 		4A87E1A9238CA21200A0BABA /* Pods_Musical_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; };
 		4A87E1AA238CA21200A0BABA /* Pods_Musical_Notes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AAAC8212395AF3E00565E43 /* QuickViewAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */; };
@@ -63,6 +65,8 @@
 		4A22F26E2389F00800D30551 /* Musical NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Musical NotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A22F2722389F00800D30551 /* Musical_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_NotesTests.swift; sourceTree = "<group>"; };
 		4A22F2742389F00800D30551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4FF3CE239B143F005C5146 /* addBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBookViewController.swift; sourceTree = "<group>"; };
+		4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeReadViewController.swift; sourceTree = "<group>"; };
 		4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViewAnalyticsViewController.swift; sourceTree = "<group>"; };
 		70F8BD7FF89302C8D0E7A0A3 /* Pods-Musical Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musical Notes.release.xcconfig"; path = "Target Support Files/Pods-Musical Notes/Pods-Musical Notes.release.xcconfig"; sourceTree = "<group>"; };
 		C30E5F2834292C2742D84B8D /* Pods_Musical_NotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musical_NotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +121,8 @@
 				4A22F25D2389F00600D30551 /* SceneDelegate.swift */,
 				4A22F25F2389F00600D30551 /* ViewController.swift */,
 				4A22F2612389F00600D30551 /* Main.storyboard */,
+				4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */,
+				4A4FF3CE239B143F005C5146 /* addBookViewController.swift */,
 				4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */,
 				4A228FB22390007D00B2545D /* AnalyticsViewController.swift */,
 				4A228FB0238CC87B00B2545D /* StartViewController.swift */,
@@ -355,8 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A22F2602389F00600D30551 /* ViewController.swift in Sources */,
+				4A4FF3D1239B4B7F005C5146 /* timeReadViewController.swift in Sources */,
 				4A228FB1238CC87B00B2545D /* StartViewController.swift in Sources */,
 				4AAAC8212395AF3E00565E43 /* QuickViewAnalyticsViewController.swift in Sources */,
+				4A4FF3CF239B143F005C5146 /* addBookViewController.swift in Sources */,
 				4A228FB32390007D00B2545D /* AnalyticsViewController.swift in Sources */,
 				4A22F25C2389F00600D30551 /* AppDelegate.swift in Sources */,
 				4A22F25E2389F00600D30551 /* SceneDelegate.swift in Sources */,
