@@ -226,6 +226,7 @@ class timeReadViewController: UIViewController {
                     self.lineChart.data = lineChartData
                     self.lineChart.leftAxis.drawGridLinesEnabled = false
                     self.lineChart.xAxis.drawGridLinesEnabled = false
+                    self.lineChart.rightAxis.drawGridLinesEnabled = false
                     self.lineChart.animate(xAxisDuration: 2, yAxisDuration: 2)
                     let gradientColors = [UIColor.gray.cgColor, UIColor.clear.cgColor] as CFArray
                     let colorLocations: [CGFloat] = [1.0, 0.0]
