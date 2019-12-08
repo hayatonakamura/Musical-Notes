@@ -164,7 +164,7 @@
                         <color key="backgroundColor" red="0.92133218049999999" green="0.51966795759999995" blue="0.4875932905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="TPl-fu-kCh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Books" id="lIp-2G-xUV"/>
+                    <tabBarItem key="tabBarItem" title="Books" image="book" catalog="system" id="lIp-2G-xUV"/>
                     <connections>
                         <outlet property="author_label" destination="Yub-yz-T9R" id="NsG-ft-DsX"/>
                         <outlet property="isbn_label" destination="QuF-7P-fDl" id="kX3-Ol-jU1"/>
@@ -331,7 +331,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1t-Gh-h2Q"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Analytics" id="wb6-91-Ybq"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="chart.bar" catalog="system" id="wb6-91-Ybq"/>
                     <navigationItem key="navigationItem" id="bWy-mt-rwa"/>
                     <connections>
                         <outlet property="FE_bar_char" destination="eda-r3-vV1" id="I4B-ZX-tcp"/>
@@ -542,7 +542,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EUp-ui-BC4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="meR-Oo-7bz"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="meR-Oo-7bz"/>
                     <connections>
                         <outlet property="goalChart" destination="k6s-Q8-Gjf" id="LaX-VD-q4M"/>
                         <outlet property="lineChart" destination="dqR-h3-yin" id="kCY-hY-7Fg"/>
@@ -557,11 +557,14 @@
     </scenes>
     <resources>
         <image name="add" width="512" height="512"/>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="chart.bar" catalog="system" width="64" height="44"/>
         <image name="left_arrow" width="512" height="512"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="refresh_b" width="512" height="512"/>
         <image name="right_arrow" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3dR-JX-isX"/>
+        <segue reference="Y9N-Ki-U7v"/>
     </inferredMetricsTieBreakers>
 </document>

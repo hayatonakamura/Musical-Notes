@@ -62,13 +62,24 @@ class timeReadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         update_text()
-        update_goal()
         update_weekly_time()
+        update_goal()
+                
+        if (isKeyPresentInUserDefaults(key: "goal") == false) {
+            let defaults = UserDefaults.standard
+            defaults.set(3, forKey: "goal")
+        }
+        let defaults = UserDefaults.standard
+        defaults.set(3, forKey: "goal")
         
         self.progressRing.minValue = 0
         self.progressRing.maxValue = 100
         
         // Do any additional setup after loading the view.
+    }
+    
+    func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
     }
     
     func update_text(){
@@ -80,6 +91,8 @@ class timeReadViewController: UIViewController {
                    let book = try? JSONDecoder().decode(Readingtimes.self, from: data)
                 
                 let total_hours = (book!.totalTimeInHours)
+                let defaults = UserDefaults.standard
+                defaults.set(total_hours, forKey: "hours")
                 let new_total_hours = String(format: "%.2f", total_hours)
                                 
                    DispatchQueue.main.async {
@@ -90,7 +103,12 @@ class timeReadViewController: UIViewController {
     }
     
     func test_ring(){
-        self.progressRing.startProgress(to: 49, duration: 2.0) {
+        let goal: Double = UserDefaults.standard.double(forKey: "goal")
+        let hours: Double = UserDefaults.standard.double(forKey: "hours")
+        
+        let progress = Int((hours/goal)*100)
+        
+        self.progressRing.startProgress(to: CGFloat(progress), duration: 2.0) {
           print("Done animating!")
           // Do anything your heart desires...
         }
@@ -98,11 +116,13 @@ class timeReadViewController: UIViewController {
     
     func update_goal() {
         
+        let goal: Double = UserDefaults.standard.double(forKey: "goal")
+        
         self.goalChart.drawBarShadowEnabled = true
         self.goalChart.drawValueAboveBarEnabled = true
-        self.goalChart.maxVisibleCount = 100
-        self.goalChart.rightAxis.axisMaximum = 100
-        self.goalChart.leftAxis.axisMaximum = 100
+        self.goalChart.maxVisibleCount = Int(goal)
+        self.goalChart.rightAxis.axisMaximum = goal
+        self.goalChart.leftAxis.axisMaximum = goal
                 
         let xAxis  = self.goalChart.xAxis
         xAxis.labelPosition = .bottom
@@ -132,18 +152,11 @@ class timeReadViewController: UIViewController {
     
     func setDataCount(){
         
+        let hours: Double = UserDefaults.standard.double(forKey: "hours")
+        
         let barWidth = 0.6
         var yVals = [BarChartDataEntry]()
-        yVals.append(BarChartDataEntry(x: Double(1.0), y: 50))
-//        for i in 0..<count{
-//            let mult = (range + 1)
-//            let val = (Double)(arc4random_uniform(UInt32(mult)))
-//            yVals.append(BarChartDataEntry(x: Double(i) * spaceForBar, y: val))
-//        }
-        
-//        self.goalChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:["Current", "Goal"])
-//        self.goalChart.xAxis.granularity = 1
-        
+        yVals.append(BarChartDataEntry(x: Double(1.0), y: hours))
         var set1 : BarChartDataSet!
         set1 = BarChartDataSet(entries: yVals, label: "DataSet")
         var dataSets = [BarChartDataSet]()
@@ -191,7 +204,7 @@ class timeReadViewController: UIViewController {
                     self.lineChart.data = lineChartData
                     self.lineChart.leftAxis.drawGridLinesEnabled = false
                     self.lineChart.xAxis.drawGridLinesEnabled = false
-                    self.lineChart.animate(xAxisDuration: 1, yAxisDuration: 1)
+                    self.lineChart.animate(xAxisDuration: 2, yAxisDuration: 2)
                     let gradientColors = [UIColor.gray.cgColor, UIColor.clear.cgColor] as CFArray
                     let colorLocations: [CGFloat] = [1.0, 0.0]
                     guard let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) else {print ("gradient error"); return }
