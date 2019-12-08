@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Hayato/Desktop/Musical Notes/Musical Notes/changeGoalViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/Hayato/Desktop/Musical Notes/Musical Notes/StartViewController.swift">
    </FileRef>
    <FileRef

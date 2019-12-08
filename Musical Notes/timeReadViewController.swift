@@ -55,6 +55,8 @@ class timeReadViewController: UIViewController {
     @IBOutlet weak var goalChart: HorizontalBarChartView!
     @IBOutlet weak var progressRing: UICircularProgressRing!
     @IBOutlet weak var welcome_text: UILabel!
+    @IBOutlet weak var current_goal_label: UILabel!
+    @IBOutlet weak var change_goal_button: UIButton!
     
     // Change any of the properties you'd like
     
@@ -64,12 +66,19 @@ class timeReadViewController: UIViewController {
         update_text()
         update_weekly_time()
         update_goal()
+        
+        // Button customization
+        change_goal_button.layer.cornerRadius = 3
+        change_goal_button.clipsToBounds = true
              
         // Checking if user set goals already
         if (isKeyPresentInUserDefaults(key: "goal") == false) {
             let defaults = UserDefaults.standard
             defaults.set(3, forKey: "goal")
         }
+        
+        let goal: Double = UserDefaults.standard.double(forKey: "goal")
+        current_goal_label.text = "Current Goal: " + String(goal) + " hours"
         
         // Progress Ring bar
         self.progressRing.minValue = 0
@@ -238,8 +247,12 @@ class timeReadViewController: UIViewController {
         }
         test_ring()
         update_goal()
+        let goal: Double = UserDefaults.standard.double(forKey: "goal")
+        self.current_goal_label.text = "Current Goal: " + String(goal) + " hours"
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
+    
+    
     
     /*
     // MARK: - Navigation
