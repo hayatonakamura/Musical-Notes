@@ -84,6 +84,24 @@ class timeReadViewController: UIViewController {
         self.progressRing.minValue = 0
         self.progressRing.maxValue = 100
         
+        // Timer
+        let timer = Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true, block: { timer in
+            self.refresh()
+            print("Timer Activated")
+        })
+        
+        //UserDefaults.standard.double(forKey: "goal")
+        let update_timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+            if (self.isKeyPresentInUserDefaults(key: "should_reload") == true) {
+            let should_update = UserDefaults.standard.bool(forKey: "should_reload")
+                if (should_update == true) {
+                    self.refresh()
+                    let defaults = UserDefaults.standard
+                    defaults.set(false, forKey: "should_reload")
+                }
+            }
+            
+        })
         
         // Do any additional setup after loading the view.
     }
@@ -242,6 +260,18 @@ class timeReadViewController: UIViewController {
     
     @IBAction func refresh_pressed(_ sender: Any) {
         print("refresh pressed")
+        update_weekly_time()
+        DispatchQueue.main.async {
+            self.progressRing.resetProgress()
+        }
+        test_ring()
+        update_goal()
+        let goal: Double = UserDefaults.standard.double(forKey: "goal")
+        self.current_goal_label.text = "Current Goal: " + String(goal) + " hours"
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    }
+    
+    func refresh(){
         update_weekly_time()
         DispatchQueue.main.async {
             self.progressRing.resetProgress()

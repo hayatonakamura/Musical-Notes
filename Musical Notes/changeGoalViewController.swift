@@ -55,6 +55,7 @@ class changeGoalViewController: UIViewController {
             let string_new_goal = new_goal_field.text
             let defaults = UserDefaults.standard
             defaults.set(new_goal, forKey: "goal")
+            defaults.set(true, forKey: "should_reload")
             added_book_succ(goal: string_new_goal!)
         }
     }
@@ -70,6 +71,8 @@ class changeGoalViewController: UIViewController {
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
             self.new_goal_field.text = ""
+            let goal: Double = UserDefaults.standard.double(forKey: "goal")
+            self.current_goal_label.text = "Current Goal:      " + String(goal) + " hours"
         }
     }
     
