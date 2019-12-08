@@ -491,20 +491,47 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="V2m-TL-rNY" kind="show" id="3dR-JX-isX"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqR-h3-yin" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="165" width="375" height="259"/>
+                                <rect key="frame" x="0.0" y="470" width="375" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-9y-agB">
-                                <rect key="frame" x="323" y="101" width="40" height="40"/>
+                                <rect key="frame" x="323" y="74" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="refresh_b"/>
                                 <connections>
                                     <action selector="refresh_pressed:" destination="9lf-97-JLb" eventType="touchUpInside" id="lgx-ZJ-6l2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k6s-Q8-Gjf" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="371" width="246" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UwC-sR-DSc" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="259" y="354" width="104" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hours text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLR-d2-dDg">
+                                <rect key="frame" x="16" y="235" width="327" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJC-mH-9Ar">
+                                <rect key="frame" x="16" y="195" width="168" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92133218049999999" green="0.51966795759999995" blue="0.4875932905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -517,7 +544,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="meR-Oo-7bz"/>
                     <connections>
+                        <outlet property="goalChart" destination="k6s-Q8-Gjf" id="LaX-VD-q4M"/>
                         <outlet property="lineChart" destination="dqR-h3-yin" id="kCY-hY-7Fg"/>
+                        <outlet property="progressRing" destination="UwC-sR-DSc" id="LIB-wh-fgg"/>
+                        <outlet property="welcome_text" destination="OLR-d2-dDg" id="o5l-YC-aBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMk-bZ-drj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,6 +562,6 @@
         <image name="right_arrow" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y9N-Ki-U7v"/>
+        <segue reference="3dR-JX-isX"/>
     </inferredMetricsTieBreakers>
 </document>

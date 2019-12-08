@@ -20,6 +20,7 @@
 		4A4FF3D1239B4B7F005C5146 /* timeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */; };
 		4A4FF3D4239C3CE0005C5146 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4FF3D3239C3CE0005C5146 /* SwiftUICharts */; };
 		4A4FF3D6239C3D6E005C5146 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF3D5239C3D6E005C5146 /* testViewController.swift */; };
+		4A4FF3D9239C7066005C5146 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4FF3D8239C7066005C5146 /* UICircularProgressRing */; };
 		4A87E1A9238CA21200A0BABA /* Pods_Musical_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; };
 		4A87E1AA238CA21200A0BABA /* Pods_Musical_Notes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38E7EEC878FC3A1DACF0AF1 /* Pods_Musical_Notes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AAAC8212395AF3E00565E43 /* QuickViewAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */; };
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4FF3D9239C7066005C5146 /* UICircularProgressRing in Frameworks */,
 				4A87E1A9238CA21200A0BABA /* Pods_Musical_Notes.framework in Frameworks */,
 				4A4FF3D4239C3CE0005C5146 /* SwiftUICharts in Frameworks */,
 			);
@@ -125,12 +127,12 @@
 				4A22F25D2389F00600D30551 /* SceneDelegate.swift */,
 				4A22F25F2389F00600D30551 /* ViewController.swift */,
 				4A22F2612389F00600D30551 /* Main.storyboard */,
-				4A4FF3D5239C3D6E005C5146 /* testViewController.swift */,
 				4A4FF3D0239B4B7F005C5146 /* timeReadViewController.swift */,
 				4A4FF3CE239B143F005C5146 /* addBookViewController.swift */,
 				4AAAC8202395AF3E00565E43 /* QuickViewAnalyticsViewController.swift */,
 				4A228FB22390007D00B2545D /* AnalyticsViewController.swift */,
 				4A228FB0238CC87B00B2545D /* StartViewController.swift */,
+				4A4FF3D5239C3D6E005C5146 /* testViewController.swift */,
 				4A22F2642389F00800D30551 /* Assets.xcassets */,
 				4A22F2662389F00800D30551 /* LaunchScreen.storyboard */,
 				4A22F2692389F00800D30551 /* Info.plist */,
@@ -189,6 +191,7 @@
 			name = "Musical Notes";
 			packageProductDependencies = (
 				4A4FF3D3239C3CE0005C5146 /* SwiftUICharts */,
+				4A4FF3D8239C7066005C5146 /* UICircularProgressRing */,
 			);
 			productName = "Musical Notes";
 			productReference = 4A22F2582389F00600D30551 /* Musical Notes.app */;
@@ -244,6 +247,7 @@
 			mainGroup = 4A22F24F2389F00600D30551;
 			packageReferences = (
 				4A4FF3D2239C3CE0005C5146 /* XCRemoteSwiftPackageReference "ChartView" */,
+				4A4FF3D7239C7066005C5146 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
 			);
 			productRefGroup = 4A22F2592389F00600D30551 /* Products */;
 			projectDirPath = "";
@@ -662,6 +666,14 @@
 				minimumVersion = 1.4.2;
 			};
 		};
+		4A4FF3D7239C7066005C5146 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luispadron/UICircularProgressRing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +681,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A4FF3D2239C3CE0005C5146 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		4A4FF3D8239C7066005C5146 /* UICircularProgressRing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A4FF3D7239C7066005C5146 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			productName = UICircularProgressRing;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
