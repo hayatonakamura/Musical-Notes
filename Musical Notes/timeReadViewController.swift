@@ -117,7 +117,7 @@ class timeReadViewController: UIViewController {
         let hours: Double = UserDefaults.standard.double(forKey: "hours")
         
         let progress = Int((hours/goal)*100)
-        
+        self.progressRing.innerRingColor = #colorLiteral(red: 1, green: 0, blue: 0.3303074837, alpha: 1)
         self.progressRing.startProgress(to: CGFloat(progress), duration: 2.0) {
           print("Done animating!")
           // Do anything your heart desires...
