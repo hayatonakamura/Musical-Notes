@@ -97,7 +97,7 @@ class timeReadViewController: UIViewController {
                 let new_total_hours = String(format: "%.2f", total_hours)
                                 
                    DispatchQueue.main.async {
-                    self.welcome_text.text = "You have read " + new_total_hours + " this week"
+                    self.welcome_text.text = "You have read " + new_total_hours + " hours this week."
                    }
                 }
                task.resume()
