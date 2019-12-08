@@ -91,7 +91,7 @@ class timeReadViewController: UIViewController {
         })
         
         //UserDefaults.standard.double(forKey: "goal")
-        let update_timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+        let update_timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
             if (self.isKeyPresentInUserDefaults(key: "should_reload") == true) {
             let should_update = UserDefaults.standard.bool(forKey: "should_reload")
                 if (should_update == true) {

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://github.com/AppPear/ChartView",
+        "state": {
+          "branch": null,
+          "revision": "20fb782a3ec0f490e7f52b92f8911386a5b13ce9",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "UICircularProgressRing",
+        "repositoryURL": "https://github.com/luispadron/UICircularProgressRing",
+        "state": {
+          "branch": null,
+          "revision": "9b6fecc219a31d595ac9b7cd808fa5bc6f2faba6",
+          "version": "6.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
