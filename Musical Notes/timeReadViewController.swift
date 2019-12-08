@@ -64,16 +64,17 @@ class timeReadViewController: UIViewController {
         update_text()
         update_weekly_time()
         update_goal()
-                
+             
+        // Checking if user set goals already
         if (isKeyPresentInUserDefaults(key: "goal") == false) {
             let defaults = UserDefaults.standard
             defaults.set(3, forKey: "goal")
         }
-        let defaults = UserDefaults.standard
-        defaults.set(3, forKey: "goal")
         
+        // Progress Ring bar
         self.progressRing.minValue = 0
         self.progressRing.maxValue = 100
+        
         
         // Do any additional setup after loading the view.
     }
@@ -190,7 +191,19 @@ class timeReadViewController: UIViewController {
                     self.lineChart.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                     self.lineChart.translatesAutoresizingMaskIntoConstraints = false
                     var dataEntries: [ChartDataEntry] = []
-                    self.lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"])
+                    // Get the last 7 days as Strings
+                    let cal = Calendar.current
+                    var date = cal.startOfDay(for: Date())
+                    var days = [String]()
+                    for i in 1 ... 7 {
+                        let day = cal.component(.day, from: date)
+                        let month = cal.component(.month, from: date)
+                        let comb = String(month) + "/" + String(day)
+                        days.insert(comb, at: 0)
+                        date = cal.date(byAdding: .day, value: -1, to: date)!
+                    }
+                    
+                    self.lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: days)
                     self.lineChart.xAxis.granularity = 1
                     for i in 0..<x.count {
                         let dataEntry = ChartDataEntry(x: Double(i), y: Double(x[i]))
