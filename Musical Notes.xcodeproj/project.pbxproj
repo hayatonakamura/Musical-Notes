@@ -58,7 +58,7 @@
 		4A196A34238CA11F00AB1120 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A228FB0238CC87B00B2545D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4A228FB22390007D00B2545D /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyticsViewController.swift; path = "/Users/Hayato/Desktop/Musical Notes/Musical Notes/AnalyticsViewController.swift"; sourceTree = "<absolute>"; };
-		4A22F2582389F00600D30551 /* Musical Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A22F2582389F00600D30551 /* Musical Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A22F25B2389F00600D30551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A22F25D2389F00600D30551 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A22F25F2389F00600D30551 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		4A22F2592389F00600D30551 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A22F2582389F00600D30551 /* Musical Notes.app */,
+				4A22F2582389F00600D30551 /* Musical Books.app */,
 				4A22F26E2389F00800D30551 /* Musical NotesTests.xctest */,
 			);
 			name = Products;
@@ -197,7 +197,7 @@
 				4A4FF3D8239C7066005C5146 /* UICircularProgressRing */,
 			);
 			productName = "Musical Notes";
-			productReference = 4A22F2582389F00600D30551 /* Musical Notes.app */;
+			productReference = 4A22F2582389F00600D30551 /* Musical Books.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4A22F26D2389F00800D30551 /* Musical NotesTests */ = {
@@ -557,7 +557,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hayatopia.Musical-Notes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Musical Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,7 +577,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hayatopia.Musical-Notes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Musical Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
